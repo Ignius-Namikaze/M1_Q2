@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     stages {
-        stages('Checkout') {
+        stage('Checkout') {
             steps {
                 // Cloning the repository
               git url: 'https://github.com/Ignius-Namikaze/M1_Q2.git', branch: 'main'
             }
         }
-        Stages('Build') {
+        stage('Build') {
           steps {
             script {
               // Execute the batch script
